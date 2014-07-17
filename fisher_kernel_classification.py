@@ -10,7 +10,7 @@ from sklearn.svm import SVC
 from sklearn.linear_model import SGDClassifier
 
 from gensim_lda import gensim_lda
-from fisher import fisher_score
+from fisher import fisher_score, estimate_information
 
 root = "./datasets/2classes/"
 
@@ -63,10 +63,6 @@ print V
 train_array = vectorizer.transform(shuffled_train_data)
 test_array = vectorizer.transform(test_data)
 
-"""
-	classification
-"""
-
 with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 	spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
 	for num_topics in [1, 10, 100, 200, 300, 400, 500, 600, 700]:
@@ -79,30 +75,44 @@ with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 		print 'lda time {}'.format(time2 - time1)
 
 		"""
-			SGD with Fisher score 
+			SGD with Fisher kernel 
 		"""
 		classes = np.array([[c] for c in shuffled_train_classes])
-		clf = SGDClassifier(shuffle=True)
-
 		unique_classes = np.unique(classes)
 
+		clf = SGDClassifier(shuffle=True)
+
 		time1 = time.time()
+
+		info = estimate_information(train_array,lda,num_topics,V,D_train)
+		info = np.linalg.inv(info)
+		info = spa.linalg.splu(info)
+		info = info.solve(np.eye(info.shape[0]))
+
+		time2 = time.time()
+		print 'info estimation time {}'.format(time2 - time1)
+
+		time1 = time.time()
+
 		for i,score in enumerate(fisher_score(train_array,lda,num_topics,V,D_train)):
-			clf.partial_fit(score, classes[i], unique_classes) 
+			kernel = np.dot(score,info)
+			kernel = np.dot(kernel,score.T)
+			clf.partial_fit(kernel, classes[i], unique_classes) 
 
 		time2 = time.time()
 		print 'sgd time {}'.format(time2 - time1)
 
-		"""
-			SGD with Fisher score 
-		"""
 		classes = np.array([[c] for c in test_classes])
 		time1 = time.time()
 
 		went_fine = 0
 
 		for i,score in enumerate(fisher_score(test_array,lda,num_topics,V,D_test)):
-			c = clf.predict(score) 
+			kernel = np.dot(score,info)
+			kernel = np.dot(kernel,score.T)
+			c = clf.predict(kernel) 
+			# print 'class predicted {}'.format(c[0])
+			# print 'real class {}'.format(test_classes[i])
 			if c[0] == test_classes[i]:
 				went_fine += 1
 

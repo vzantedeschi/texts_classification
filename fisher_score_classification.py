@@ -75,7 +75,7 @@ with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 			lda : training model
 		"""
 		time1 = time.time()
-		lda,train_bow = gensim_lda(train_array,num_topics,10,20)
+		lda,train_bow = gensim_lda(train_array,num_topics,6,40)
 		time2 = time.time()
 		print 'lda time {}'.format(time2 - time1)
 

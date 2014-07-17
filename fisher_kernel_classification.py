@@ -65,7 +65,7 @@ test_array = vectorizer.transform(test_data)
 
 with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 	spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	for num_topics in [1, 10, 100, 200, 300, 400, 500, 600, 700]:
+	for num_topics in [1, 10, 100, 200]:
 		"""
 			lda : training model
 		"""

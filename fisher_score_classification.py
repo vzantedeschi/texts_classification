@@ -12,7 +12,6 @@ from sklearn.linear_model import SGDClassifier
 from gensim_lda import gensim_lda
 from fisher import fisher_score
 
-num_topics = 100
 root = "./datasets/2classes/"
 
 """
@@ -53,7 +52,7 @@ shuffled_train_classes = [train_classes[train_data.index(d)] for d in shuffled_t
 """
 	vocabulary
 """
-vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.01,max_df=0.1)
+vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.001,max_df=1.)
 vectorizer.fit(data)
 V = len(vectorizer.vocabulary_)
 print V

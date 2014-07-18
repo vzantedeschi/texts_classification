@@ -52,7 +52,7 @@ shuffled_train_classes = [train_classes[train_data.index(d)] for d in shuffled_t
 """
 	vocabulary
 """
-vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.001,max_df=1.)
+vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.01,max_df=1.)
 vectorizer.fit(data)
 V = len(vectorizer.vocabulary_)
 print V
@@ -67,9 +67,9 @@ test_array = vectorizer.transform(test_data)
 	classification
 """
 
-with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
+with open('./results/fisher_score_2classes_10topics.csv', 'wb') as csvfile:
 	spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	for num_topics in [1, 10, 100, 200, 300, 400, 500, 600, 700]:
+	for num_topics in range(1,10):
 		"""
 			lda : training model
 		"""

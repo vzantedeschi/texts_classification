@@ -13,7 +13,7 @@ import utils
 from gensim_lda import gensim_lda
 from fisher import fisher_score, estimate_information
 
-logger = utils.get_logger("./logs/classification.log")
+logger = utils.get_logger()
 root = "./datasets/2classes/"
 
 """
@@ -60,7 +60,7 @@ unique_classes = np.unique(train_classes_array)
 	vocabulary
 """
 logger.info('vocabulary extraction')
-vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.001,max_df=1.)
+vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.01,max_df=1.)
 vectorizer.fit(data)
 V = len(vectorizer.vocabulary_)
 print V
@@ -74,7 +74,7 @@ test_array = vectorizer.transform(test_data)
 
 with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 	spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	for num_topics in [1, 10, 100, 200]:
+	for num_topics in range(2,10):
 
 		logger.info("classification with {} topics".format(num_topics))
 

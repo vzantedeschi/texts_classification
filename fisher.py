@@ -40,9 +40,9 @@ def fisher_score(bow_array,lda_model,K,V,D):
 		yield np.concatenate((alphas.astype(np.float32),bethas.astype(np.float32)),axis=1)
 
 def estimate_information(bow_array,lda_model,K,V,D):
-	inf_matrix = np.zeros((K + K * V,K + K * V),dtype=np.float32)
+	inf_matrix = np.zeros((K + K * V,K + K * V),dtype=np.float64)
 	for i,score in enumerate(fisher_score(bow_array,lda_model,K,V,D)):
-		# score = spa.dok_matrix(score)
+		score = spa.dok_matrix(score)
 		new = np.dot(score.T, score)
 		inf_matrix += new
 	return inf_matrix / D

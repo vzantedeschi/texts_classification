@@ -1,0 +1,17 @@
+[2014-07-18 11:24:39,195] INFO - traing data and test data creation
+[2014-07-18 11:24:39,236] INFO - vocabulary extraction
+[2014-07-18 11:24:40,653] INFO - bow arrays creation
+[2014-07-18 11:24:41,101] INFO - classification with 1 topics
+[2014-07-18 11:24:41,101] INFO - lda topic extraction
+[2014-07-18 11:25:16,563] INFO - traing data and test data creation
+[2014-07-18 11:25:16,617] INFO - vocabulary extraction
+[2014-07-18 11:25:17,551] INFO - bow arrays creation
+[2014-07-18 11:25:17,992] INFO - classification with 1 topics
+[2014-07-18 11:25:17,992] INFO - lda topic extraction
+[2014-07-18 11:25:55,117] INFO - traing data and test data creation
+[2014-07-18 11:25:55,159] INFO - vocabulary extraction
+[2014-07-18 11:25:56,088] INFO - bow arrays creation
+[2014-07-18 11:25:56,527] INFO - classification with 1 topics
+[2014-07-18 11:25:56,527] INFO - lda topic extraction
+[2014-07-18 11:26:04,994] INFO - lda time 8.46712398529s
+[2014-07-18 11:26:04,995] INFO - information matrix estimation

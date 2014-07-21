@@ -60,7 +60,7 @@ unique_classes = np.unique(train_classes_array)
 	vocabulary
 """
 logger.info('vocabulary extraction')
-vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.1,max_df=1.)
+vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.01,max_df=1.)
 vectorizer.fit(data)
 V = len(vectorizer.vocabulary_)
 print V

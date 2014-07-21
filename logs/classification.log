@@ -25,3 +25,33 @@
 [2014-07-18 17:23:58,220] INFO - lda topic extraction
 [2014-07-18 17:24:05,095] INFO - lda time 6.87438106537s
 [2014-07-18 17:24:05,095] INFO - information matrix estimation
+[2014-07-21 08:58:30,105] INFO - traing data and test data creation
+[2014-07-21 08:58:30,260] INFO - vocabulary extraction
+[2014-07-21 08:58:31,654] INFO - bow arrays creation
+[2014-07-21 08:58:32,461] INFO - classification with 2 topics
+[2014-07-21 08:58:32,461] INFO - lda topic extraction
+[2014-07-21 08:58:45,791] INFO - lda time 13.3290660381s
+[2014-07-21 08:58:45,791] INFO - information matrix estimation
+[2014-07-21 08:59:09,206] INFO - classification with 3 topics
+[2014-07-21 08:59:09,206] INFO - lda topic extraction
+[2014-07-21 08:59:27,762] INFO - lda time 18.5552430153s
+[2014-07-21 08:59:27,762] INFO - information matrix estimation
+[2014-07-21 09:00:00,174] INFO - classification with 4 topics
+[2014-07-21 09:00:00,174] INFO - lda topic extraction
+[2014-07-21 09:00:19,104] INFO - lda time 18.9292559624s
+[2014-07-21 09:00:19,104] INFO - information matrix estimation
+[2014-07-21 09:04:09,641] INFO - traing data and test data creation
+[2014-07-21 09:04:09,784] INFO - vocabulary extraction
+[2014-07-21 09:04:11,142] INFO - bow arrays creation
+[2014-07-21 09:04:11,857] INFO - classification with 2 topics
+[2014-07-21 09:04:11,857] INFO - lda topic extraction
+[2014-07-21 09:04:42,389] INFO - lda time 30.5317571163s
+[2014-07-21 09:04:42,389] INFO - information matrix estimation
+[2014-07-21 09:27:23,538] INFO - classification with 3 topics
+[2014-07-21 09:27:23,538] INFO - lda topic extraction
+[2014-07-21 09:27:54,279] INFO - lda time 30.7407279015s
+[2014-07-21 09:27:54,279] INFO - information matrix estimation
+[2014-07-21 10:03:51,329] INFO - classification with 4 topics
+[2014-07-21 10:03:51,329] INFO - lda topic extraction
+[2014-07-21 10:04:21,856] INFO - lda time 30.5261859894s
+[2014-07-21 10:04:21,856] INFO - information matrix estimation

@@ -60,7 +60,7 @@ unique_classes = np.unique(train_classes_array)
 	vocabulary
 """
 logger.info('vocabulary extraction')
-vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.01,max_df=1.)
+vectorizer = CountVectorizer(input='filename',decode_error='replace',stop_words='english',min_df=0.1,max_df=1.)
 vectorizer.fit(data)
 V = len(vectorizer.vocabulary_)
 print V
@@ -74,7 +74,7 @@ test_array = vectorizer.transform(test_data)
 
 with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 	spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	for num_topics in range(2,10):
+	for num_topics in range(2,5):
 
 		logger.info("classification with {} topics".format(num_topics))
 
@@ -96,10 +96,14 @@ with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 		logger.info('information matrix estimation')
 		time1 = time.time()
 
-		info = estimate_information(train_array,lda,num_topics,V,D_train)
-		info = np.linalg.inv(info)
-		info = spa.linalg.splu(info)
-		info = info.solve(np.eye(info.shape[0]))
+		try:
+			info = estimate_information(train_array,lda,num_topics,V,D_train)
+			info = np.linalg.inv(info)
+			info = spa.linalg.splu(info)
+			info = info.solve(np.eye(info.shape[0]))
+			root_inv_info = lin.sqrtm(info)
+		except:
+			continue
 
 		time2 = time.time()
 		logger.info('information estimation time {}s'.format(time2 - time1))
@@ -108,8 +112,8 @@ with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 		time1 = time.time()
 
 		for i,score in enumerate(fisher_score(train_array,lda,num_topics,V,D_train)):
-			kernel = np.dot(score,info)
-			kernel = np.dot(kernel,score.T)
+			kernel = np.dot(score,root_inv_info)
+			# kernel = np.dot(kernel,score.T)
 			clf.partial_fit(kernel, train_classes_array[i], unique_classes) 
 
 		time2 = time.time()
@@ -121,8 +125,8 @@ with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 		corrects = 0
 
 		for i,score in enumerate(fisher_score(test_array,lda,num_topics,V,D_test)):
-			kernel = np.dot(score,info)
-			kernel = np.dot(kernel,score.T)
+			kernel = np.dot(score,root_inv_info)
+			# kernel = np.dot(kernel,score.T)
 			c = clf.predict(kernel) 
 			# print 'class predicted {}'.format(c[0])
 			# print 'real class {}'.format(test_classes[i])

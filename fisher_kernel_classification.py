@@ -8,6 +8,7 @@ import scipy.sparse as spa
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.svm import SVC
 from sklearn.linear_model import SGDClassifier
+import scipy.linalg as lin
 
 import utils
 from gensim_lda import gensim_lda
@@ -74,7 +75,7 @@ test_array = vectorizer.transform(test_data)
 
 with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 	spamwriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-	for num_topics in range(2,5):
+	for num_topics in range(2,10):
 
 		logger.info("classification with {} topics".format(num_topics))
 
@@ -102,7 +103,8 @@ with open('./results/fisher_kernel_2classes.csv', 'wb') as csvfile:
 			info = spa.linalg.splu(info)
 			info = info.solve(np.eye(info.shape[0]))
 			root_inv_info = lin.sqrtm(info)
-		except:
+		except Exception as e:
+			logger.error(e)
 			continue
 
 		time2 = time.time()

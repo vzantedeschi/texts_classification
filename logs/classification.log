@@ -55,3 +55,155 @@
 [2014-07-21 10:03:51,329] INFO - lda topic extraction
 [2014-07-21 10:04:21,856] INFO - lda time 30.5261859894s
 [2014-07-21 10:04:21,856] INFO - information matrix estimation
+[2014-07-21 11:03:25,864] INFO - traing data and test data creation
+[2014-07-21 11:03:25,914] INFO - vocabulary extraction
+[2014-07-21 11:03:27,403] INFO - bow arrays creation
+[2014-07-21 11:03:27,892] INFO - classification with 2 topics
+[2014-07-21 11:03:27,892] INFO - lda topic extraction
+[2014-07-21 11:03:39,914] INFO - lda time 12.022149086s
+[2014-07-21 11:03:39,914] INFO - information matrix estimation
+[2014-07-21 11:21:44,042] INFO - traing data and test data creation
+[2014-07-21 11:21:44,086] INFO - vocabulary extraction
+[2014-07-21 11:21:45,031] INFO - bow arrays creation
+[2014-07-21 11:21:45,563] INFO - classification with 2 topics
+[2014-07-21 11:21:45,563] INFO - lda topic extraction
+[2014-07-21 11:21:51,497] INFO - lda time 5.9343650341s
+[2014-07-21 11:21:51,498] INFO - information matrix estimation
+[2014-07-21 11:22:00,533] ERROR - name 'lin' is not defined
+[2014-07-21 11:22:00,533] INFO - classification with 3 topics
+[2014-07-21 11:22:00,533] INFO - lda topic extraction
+[2014-07-21 11:22:07,484] INFO - lda time 6.95121312141s
+[2014-07-21 11:22:07,485] INFO - information matrix estimation
+[2014-07-21 11:22:19,714] ERROR - name 'lin' is not defined
+[2014-07-21 11:22:19,714] INFO - classification with 4 topics
+[2014-07-21 11:22:19,714] INFO - lda topic extraction
+[2014-07-21 11:22:26,679] INFO - lda time 6.9651119709s
+[2014-07-21 11:22:26,680] INFO - information matrix estimation
+[2014-07-21 11:22:42,105] ERROR - name 'lin' is not defined
+[2014-07-21 11:23:42,310] INFO - traing data and test data creation
+[2014-07-21 11:23:42,370] INFO - vocabulary extraction
+[2014-07-21 11:23:43,316] INFO - bow arrays creation
+[2014-07-21 11:23:43,858] INFO - classification with 2 topics
+[2014-07-21 11:23:43,858] INFO - lda topic extraction
+[2014-07-21 11:23:49,387] INFO - lda time 5.52890610695s
+[2014-07-21 11:23:49,387] INFO - information matrix estimation
+[2014-07-21 11:23:58,370] INFO - information estimation time 8.98295283318s
+[2014-07-21 11:23:58,370] INFO - SGD classifier
+[2014-07-21 11:24:02,728] INFO - sgd time 4.35768508911s
+[2014-07-21 11:24:02,728] INFO - test data classification
+[2014-07-21 11:24:03,117] INFO - classification time 0.388815879822s
+[2014-07-21 11:24:03,117] INFO - presicion 53.4090909091
+[2014-07-21 11:24:03,117] INFO - total time 19.2591049671s
+[2014-07-21 11:24:03,117] INFO - classification with 3 topics
+[2014-07-21 11:24:03,117] INFO - lda topic extraction
+[2014-07-21 11:24:09,851] INFO - lda time 6.73382902145s
+[2014-07-21 11:24:09,853] INFO - information matrix estimation
+[2014-07-21 11:24:22,693] INFO - information estimation time 12.8401679993s
+[2014-07-21 11:24:22,693] INFO - SGD classifier
+[2014-07-21 11:24:27,989] INFO - sgd time 5.29531002045s
+[2014-07-21 11:24:27,989] INFO - test data classification
+[2014-07-21 11:24:28,472] INFO - classification time 0.483057975769s
+[2014-07-21 11:24:28,473] INFO - presicion 59.0909090909
+[2014-07-21 11:24:28,473] INFO - total time 25.3550651073s
+[2014-07-21 11:24:28,473] INFO - classification with 4 topics
+[2014-07-21 11:24:28,473] INFO - lda topic extraction
+[2014-07-21 11:24:35,201] INFO - lda time 6.72839093208s
+[2014-07-21 11:24:35,203] INFO - information matrix estimation
+[2014-07-21 11:24:52,369] INFO - information estimation time 17.165733099s
+[2014-07-21 11:24:52,369] INFO - SGD classifier
+[2014-07-21 11:24:59,147] INFO - sgd time 6.77764701843s
+[2014-07-21 11:24:59,147] INFO - test data classification
+[2014-07-21 11:24:59,783] INFO - classification time 0.635760068893s
+[2014-07-21 11:24:59,783] INFO - presicion 60.2272727273
+[2014-07-21 11:24:59,783] INFO - total time 31.3100168705s
+[2014-07-21 11:25:29,449] INFO - traing data and test data creation
+[2014-07-21 11:25:29,499] INFO - vocabulary extraction
+[2014-07-21 11:25:30,444] INFO - bow arrays creation
+[2014-07-21 11:25:30,977] INFO - classification with 2 topics
+[2014-07-21 11:25:30,977] INFO - lda topic extraction
+[2014-07-21 11:25:36,732] INFO - lda time 5.75534796715s
+[2014-07-21 11:25:36,732] INFO - information matrix estimation
+[2014-07-21 11:25:45,758] INFO - information estimation time 9.02516794205s
+[2014-07-21 11:25:45,758] INFO - SGD classifier
+[2014-07-21 11:25:50,127] INFO - sgd time 4.36878705025s
+[2014-07-21 11:25:50,127] INFO - test data classification
+[2014-07-21 11:25:50,517] INFO - classification time 0.389512062073s
+[2014-07-21 11:25:50,517] INFO - presicion 57.3863636364
+[2014-07-21 11:25:50,517] INFO - total time 19.5396399498s
+[2014-07-21 11:25:50,517] INFO - classification with 3 topics
+[2014-07-21 11:25:50,517] INFO - lda topic extraction
+[2014-07-21 11:25:57,544] INFO - lda time 7.02691102028s
+[2014-07-21 11:25:57,545] INFO - information matrix estimation
+[2014-07-21 11:26:10,346] INFO - information estimation time 12.8006618023s
+[2014-07-21 11:26:10,346] INFO - SGD classifier
+[2014-07-21 11:26:15,672] INFO - sgd time 5.325922966s
+[2014-07-21 11:26:15,673] INFO - test data classification
+[2014-07-21 11:26:16,172] INFO - classification time 0.499361991882s
+[2014-07-21 11:26:16,172] INFO - presicion 52.8409090909
+[2014-07-21 11:26:16,172] INFO - total time 25.655164957s
+[2014-07-21 11:26:16,172] INFO - classification with 4 topics
+[2014-07-21 11:26:16,172] INFO - lda topic extraction
+[2014-07-21 11:26:24,747] INFO - lda time 8.57433891296s
+[2014-07-21 11:26:24,748] INFO - information matrix estimation
+[2014-07-21 11:26:41,919] INFO - information estimation time 17.1708168983s
+[2014-07-21 11:26:41,919] INFO - SGD classifier
+[2014-07-21 11:26:48,839] INFO - sgd time 6.91921114922s
+[2014-07-21 11:26:48,839] INFO - test data classification
+[2014-07-21 11:26:49,509] INFO - classification time 0.670099973679s
+[2014-07-21 11:26:49,509] INFO - presicion 67.0454545455
+[2014-07-21 11:26:49,509] INFO - total time 33.3365700245s
+[2014-07-21 11:26:49,509] INFO - classification with 5 topics
+[2014-07-21 11:26:49,509] INFO - lda topic extraction
+[2014-07-21 11:26:56,400] INFO - lda time 6.89030313492s
+[2014-07-21 11:26:56,401] INFO - information matrix estimation
+[2014-07-21 11:27:18,179] INFO - information estimation time 21.7775170803s
+[2014-07-21 11:27:18,179] INFO - SGD classifier
+[2014-07-21 11:27:26,018] INFO - sgd time 7.83920311928s
+[2014-07-21 11:27:26,019] INFO - test data classification
+[2014-07-21 11:27:26,785] INFO - classification time 0.765981912613s
+[2014-07-21 11:27:26,785] INFO - presicion 50.0
+[2014-07-21 11:27:26,785] INFO - total time 37.2753269672s
+[2014-07-21 11:27:26,785] INFO - classification with 6 topics
+[2014-07-21 11:27:26,785] INFO - lda topic extraction
+[2014-07-21 11:27:33,820] INFO - lda time 7.03507399559s
+[2014-07-21 11:27:33,821] INFO - information matrix estimation
+[2014-07-21 11:28:01,210] INFO - information estimation time 27.3879930973s
+[2014-07-21 11:28:01,210] INFO - SGD classifier
+[2014-07-21 11:28:10,757] INFO - sgd time 9.54766988754s
+[2014-07-21 11:28:10,758] INFO - test data classification
+[2014-07-21 11:28:11,700] INFO - classification time 0.942593097687s
+[2014-07-21 11:28:11,701] INFO - presicion 64.2045454545
+[2014-07-21 11:28:11,701] INFO - total time 44.9153399467s
+[2014-07-21 11:28:11,701] INFO - classification with 7 topics
+[2014-07-21 11:28:11,701] INFO - lda topic extraction
+[2014-07-21 11:28:18,948] INFO - lda time 7.24695706367s
+[2014-07-21 11:28:18,949] INFO - information matrix estimation
+[2014-07-21 11:28:52,544] INFO - information estimation time 33.5946149826s
+[2014-07-21 11:28:52,544] INFO - SGD classifier
+[2014-07-21 11:29:04,229] INFO - sgd time 11.6843771935s
+[2014-07-21 11:29:04,229] INFO - test data classification
+[2014-07-21 11:29:05,451] INFO - classification time 1.22220492363s
+[2014-07-21 11:29:05,452] INFO - presicion 57.9545454545
+[2014-07-21 11:29:05,452] INFO - total time 53.7506279945s
+[2014-07-21 11:29:05,452] INFO - classification with 8 topics
+[2014-07-21 11:29:05,452] INFO - lda topic extraction
+[2014-07-21 11:29:12,964] INFO - lda time 7.51248192787s
+[2014-07-21 11:29:12,965] INFO - information matrix estimation
+[2014-07-21 11:29:54,115] INFO - information estimation time 41.1487419605s
+[2014-07-21 11:29:54,115] INFO - SGD classifier
+[2014-07-21 11:30:06,224] INFO - sgd time 12.1094138622s
+[2014-07-21 11:30:06,225] INFO - test data classification
+[2014-07-21 11:30:07,441] INFO - classification time 1.21614599228s
+[2014-07-21 11:30:07,441] INFO - presicion 62.5
+[2014-07-21 11:30:07,441] INFO - total time 61.988768816s
+[2014-07-21 11:30:07,441] INFO - classification with 9 topics
+[2014-07-21 11:30:07,441] INFO - lda topic extraction
+[2014-07-21 11:30:15,399] INFO - lda time 7.95780301094s
+[2014-07-21 11:30:15,400] INFO - information matrix estimation
+[2014-07-21 11:31:05,219] INFO - information estimation time 49.8187839985s
+[2014-07-21 11:31:05,219] INFO - SGD classifier
+[2014-07-21 11:31:20,737] INFO - sgd time 15.5178420544s
+[2014-07-21 11:31:20,738] INFO - test data classification
+[2014-07-21 11:31:22,394] INFO - classification time 1.6561820507s
+[2014-07-21 11:31:22,394] INFO - presicion 64.2045454545
+[2014-07-21 11:31:22,394] INFO - total time 74.9525749683s
